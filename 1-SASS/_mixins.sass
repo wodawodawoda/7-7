@@ -1,3 +1,18 @@
-=flex($flex-direction, $wrap)
+=font($family:sans-serif, $size:1em, $color:black)
+	font-family: $family
+	font-size: $size
+	color: $color
+
+=flex($flex-direction:row, $wrap:wrap, $horizontal:center, $vertical:center)
 	display: flex
 	flex-flow: $flex-direction $wrap
+	@if $flex-direction == "row"
+		justify-content: $horizontal
+		align-items: $vertical
+	@else if $flex-direction == "column"
+		justify-content: $vertical
+		align-items: $horizontal
+	@else
+		@error "Invalid flex argument"
+
+

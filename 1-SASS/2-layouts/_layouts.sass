@@ -1,15 +1,39 @@
 // NAV
 
 nav
-	position: sticky
+	position: absolute
 	top: 0
-	justify-content: space-between
 
 #logo
-	font: $logo-font
+	+font($logo-font, 24px, $color-gold)
 
 #nav-menu
+	+flex(row, nowrap, flex-end, center)
 	.item
-		font-family: Wisdom
+		+font($nav-font, #fff)
+		margin-right: 20px
 		text-transform: uppercase
+		&:last-child
+			margin-right: 0
+
+// HEADER HERO
+
+#hero
+	+flex()
+	+size(100%, 700px)
+	background: url(../../images/hero.png) no-repeat center
+	.item
+		text-align: center
+		p
+			+font($h-p-font, 40px, #fff)
+			text-transform: capitalize
+		h1
+			+font($h-font, 75px, #fff)
+			text-transform: uppercase
+		button
+			+font($h-font, 1em, #fff)
+			padding: 25px 50px
+			background: $color-gold
+			box-shadow: 0px 0px 10px 5px #ccc
+
 		
