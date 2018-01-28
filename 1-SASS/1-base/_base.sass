@@ -1,0 +1,37 @@
+body
+	+flex(column, nowrap)
+
+.row
+	+flex(row, wrap)
+
+.col
+	flex: 1
+
+.container
+	max-width: 1200px
+	width: 100%
+	
+
+
+//HEADERS, PARAGRAPHS BUTTONS BASIC STYLES
+
+h2
+	font: $h-font 40px $h-black
+	&+ p
+		font: $h-p-font 16px  $p-grey
+
+
+h3
+	font: $h-font 18px $h-black
+	&+ p
+		font: $h-p-font #737373
+
+p
+	font: $p-font
+
+a
+	text-decoration: none
+	color: inherit
+
+
+

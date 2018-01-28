@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Wisdom;
+  font-family-src: url(../fonts/Wisdom-Script.otf);
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col {
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+h2 {
+  font: Montserrat-bold 40px #222222;
+}
+
+h2 + p {
+  font: Droidserif-italic 16px #777777;
+}
+
+h3 {
+  font: Montserrat-bold 18px #222222;
+}
+
+h3 + p {
+  font: Droidserif-italic #737373;
+}
+
+p {
+  font: Robotoslab-regular #777777;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+}
+
+#logo {
+  font: Wisdom-script #FED136 26px;
+}
+
+#nav-menu .item {
+  font-family: Wisdom;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=app.css.map */
