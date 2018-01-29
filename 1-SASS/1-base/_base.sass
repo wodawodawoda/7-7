@@ -8,7 +8,7 @@ body
 	+flex(row, wrap)
 
 .col
-	+flex(row, nowrap)
+	+flex(column, nowrap)
 	flex: 1
 
 .container
@@ -20,18 +20,16 @@ body
 //HEADERS, PARAGRAPHS BUTTONS BASIC STYLES
 
 h2
-	font: $h-font 40px $h-black
-	&+ p
-		font: $h-p-font 16px  $p-grey
-
+	+font($h-font, 40px, $h-black)
+	text-transform: uppercase
+	&+p
+		+font($h-p-font, 16px, $p-grey)
 
 h3
-	font: $h-font 18px $h-black
-	&+ p
-		font: $h-p-font #737373
+	+font($h-font, 18px, $h-black)
 
 p
-	font: $p-font
+	+font($p-font, 14px, $p-grey)
 
 a
 	text-decoration: none

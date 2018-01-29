@@ -10,7 +10,7 @@ nav
 #nav-menu
 	+flex(row, nowrap, flex-end, center)
 	.item
-		+font($nav-font, #fff)
+		+font($nav-font, 1em, #fff)
 		margin-right: 20px
 		text-transform: uppercase
 		&:last-child
@@ -21,7 +21,8 @@ nav
 #hero
 	+flex()
 	+size(100%, 700px)
-	background: url(../../images/hero.png) no-repeat center
+	// position: relative
+	+bg-opacity("../../images/hero.png", 0.5)
 	.item
 		text-align: center
 		p
@@ -36,4 +37,19 @@ nav
 			background: $color-gold
 			box-shadow: 0px 0px 10px 5px #ccc
 
-		
+// SERVICES
+
+#services
+	.header
+		text-align: center
+	.row
+		margin: 0 -23px
+		.item
+			margin: 0 23px
+			text-align: center
+			font-family: $p-font
+	.icon
+		+flex()
+		border: 3px solid $color-gold
+		border-radius: 50%
+		+size(68px, 68px)
