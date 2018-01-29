@@ -1,6 +1,6 @@
-*
-	border: 1px solid black
-	box-sizing: border-box
+// *
+// 	border: 1px solid black
+// 	box-sizing: border-box
 
 body
 	+flex(column, nowrap, center)
@@ -17,7 +17,9 @@ body
 	+flex(column, nowrap)
 	max-width: 934px
 	width: 100%
-	
+
+section:not(#cooperation)
+	padding-bottom: 120px
 
 
 //HEADERS, PARAGRAPHS BUTTONS BASIC STYLES
@@ -26,8 +28,10 @@ h2
 	+font($h-font, 40px, $h-black)
 	text-transform: uppercase
 	letter-spacing: -1px
+	margin-top: 120px
 	&+p
 		+font($h-p-font, 16px, $p-grey)
+		margin-bottom: 80px
 
 h3
 	+font($h-font, 18px, $h-black)

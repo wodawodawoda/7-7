@@ -32,6 +32,20 @@
 		@extend #hero:before
 		background: rgba(0,0,0,$opacity)
 
+
+=bg-hue($bg-image-url, $opacity)
+	position: relative
+	&:before
+		content: ""
+		background: url($bg-image-url) no-repeat center
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		z-index: 11
+
+
 =btn
 	+font($h-font, 1em, #fff)
 	padding: 25px 50px

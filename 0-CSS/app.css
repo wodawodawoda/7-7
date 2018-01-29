@@ -23,11 +23,6 @@
   font-family: Droidserif-italic;
 }
 
-* {
-  border: 1px solid black;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -60,18 +55,24 @@ body {
   width: 100%;
 }
 
+section:not(#cooperation) {
+  padding-bottom: 120px;
+}
+
 h2 {
   font-family: Montserrat-bold;
   font-size: 40px;
   color: #222222;
   text-transform: uppercase;
   letter-spacing: -1px;
+  margin-top: 120px;
 }
 
 h2 + p {
   font-family: Droidserif-italic;
   font-size: 16px;
   color: #777777;
+  margin-bottom: 80px;
 }
 
 h3 {
@@ -135,6 +136,7 @@ nav {
   height: 700px;
   width: 100%;
   position: relative;
+  background-size: cover;
 }
 
 #hero:before, #hero:after {
@@ -324,7 +326,11 @@ nav {
   background-color: #f9f9f9;
 }
 
-#logo .row {
+#cooperation {
+  height: 164px;
+}
+
+#cooperation .row {
   justify-content: space-around;
 }
 
@@ -334,8 +340,7 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: url(../../images/2-layers.png) no-repeat center;
-  background-size: cover;
+  background: url(../../images/map-image.svg) 120% no-repeat, #222222;
 }
 
 #contact .header h2 {
@@ -372,6 +377,32 @@ nav {
   color: #fff;
   padding: 25px 50px;
   background: #FED136;
+}
+
+#footer {
+  height: 90px;
+}
+
+#footer .item {
+  flex: 1;
+  text-align: center;
+}
+
+#footer .item p {
+  text-align: left;
+}
+
+#footer .footer-social span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  width: 41px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 3px solid #222222;
+  background-color: #000;
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
