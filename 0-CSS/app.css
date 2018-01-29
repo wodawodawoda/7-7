@@ -23,6 +23,11 @@
   font-family: Droidserif-italic;
 }
 
+* {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -221,6 +226,29 @@ nav {
 
 #portfolio .item p {
   font-family: Droidserif-italic;
+}
+
+#about .col, #about h3 {
+  text-align: right;
+}
+
+#about .col:nth-child(2), #about h3:nth-child(2) {
+  flex: 0.6;
+}
+
+#about .col:nth-child(3), #about .col:nth-child(3) > h3, #about h3:nth-child(3), #about h3:nth-child(3) > h3 {
+  text-align: left;
+}
+
+#about .last-about {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 182px;
+  width: 182px;
+  background: #FED136;
+  border: 7px solid #f1f1f1;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=app.css.map */

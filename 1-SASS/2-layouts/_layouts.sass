@@ -73,3 +73,23 @@ nav
 		background: #fff
 		p
 			font-family: $h-p-font
+
+// ABOUT US
+
+#about
+	.col, h3
+		text-align: right
+		&:nth-child(2)
+			flex: 0.6
+		&:nth-child(3), &:nth-child(3) > h3
+			text-align: left
+	.last-about
+		display: flex
+		align-items: center
+		text-align: center
+		+size(182px, 182px)
+		background: $color-gold
+		border: 7px solid #f1f1f1
+		border-radius: 50%
+
+
