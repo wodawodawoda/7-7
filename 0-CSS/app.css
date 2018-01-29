@@ -23,10 +23,6 @@
   font-family: Droidserif-italic;
 }
 
-* {
-  border: 1px solid black;
-}
-
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -39,6 +35,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .col {
@@ -50,7 +47,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 934px;
   width: 100%;
 }
 
@@ -82,6 +79,10 @@ p {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.header {
+  text-align: center;
 }
 
 nav {
@@ -166,29 +167,60 @@ nav {
   box-shadow: 0px 0px 10px 5px #ccc;
 }
 
-#services .header {
-  text-align: center;
-}
-
-#services .row {
-  margin: 0 -23px;
-}
-
-#services .row .item {
-  margin: 0 23px;
-  text-align: center;
-  font-family: Robotoslab-regular;
-}
-
-#services .icon {
+#services {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+#services .row {
+  justify-content: space-between;
+}
+
+#services .row .item {
+  max-width: 274px;
+  text-align: center;
+  font-family: Robotoslab-regular;
+}
+
+#services .icon-1, #services .icon-2, #services .icon-3 {
+  margin: 0 auto;
   border: 3px solid #FED136;
   border-radius: 50%;
   height: 68px;
   width: 68px;
+  background: url(../../images/icon-basket.svg) no-repeat center;
+}
+
+#services .icon-2 {
+  background: url(../../images/icon-laptop.svg) no-repeat center;
+}
+
+#services .icon-3 {
+  background: url(../../images/icon-locked.svg) no-repeat center;
+}
+
+#portfolio {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #f7f7f7;
+}
+
+#portfolio .row {
+  justify-content: space-between;
+}
+
+#portfolio .item {
+  text-align: center;
+  background: #fff;
+}
+
+#portfolio .item p {
+  font-family: Droidserif-italic;
 }
 
 /*# sourceMappingURL=app.css.map */

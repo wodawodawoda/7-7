@@ -21,7 +21,6 @@ nav
 #hero
 	+flex()
 	+size(100%, 700px)
-	// position: relative
 	+bg-opacity("../../images/hero.png", 0.5)
 	.item
 		text-align: center
@@ -40,16 +39,37 @@ nav
 // SERVICES
 
 #services
-	.header
-		text-align: center
+	+flex()
 	.row
-		margin: 0 -23px
+		justify-content: space-between
 		.item
-			margin: 0 23px
+			max-width: 274px
 			text-align: center
 			font-family: $p-font
-	.icon
-		+flex()
+	.icon-1
+		margin: 0 auto
 		border: 3px solid $color-gold
 		border-radius: 50%
 		+size(68px, 68px)
+		background: url(../../images/icon-basket.svg) no-repeat center
+	.icon-2
+		@extend .icon-1
+		background: url(../../images/icon-laptop.svg) no-repeat center
+	.icon-3
+		@extend .icon-1
+		background: url(../../images/icon-locked.svg) no-repeat center
+		
+
+// PORTFOLIO
+
+#portfolio
+	+flex()
+	width: 100%
+	background: $bg-dark
+	.row
+		justify-content: space-between
+	.item
+		text-align: center
+		background: #fff
+		p
+			font-family: $h-p-font
