@@ -8,21 +8,23 @@
 	<link rel="stylesheet" href="0-CSS/app.css">
 </head>
 <body>
-	<nav class="container row">
-		<div id="logo"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">Golden</a></div>
-		<div id="nav-menu" class="col">
-			<a href="#" class="item">home</a>
-			<a href="#" class="item">services</a>
-			<a href="#" class="item">portfolio</a>
-			<a href="#" class="item">about</a>
-			<a href="#" class="item">contact</a>
+	<nav class="container">
+		<div class="row">
+			<div id="logo"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">Golden</a></div>
+			<div id="nav-menu" class="col">
+				<a href="#" class="item">home</a>
+				<a href="#" class="item">services</a>
+				<a href="#" class="item">portfolio</a>
+				<a href="#" class="item">about</a>
+				<a href="#" class="item">contact</a>
+			</div>
 		</div>
 	</nav>
 	<header id="hero">
 		<div class="item">
 			<p>welcome to our studio!</p>
 			<h1>it's nice to meet you</h1>
-			<button>TELL ME MORE</button>
+			<button class="button">TELL ME MORE</button>
 		</div>
 	</header>
 	<section id="services" class="container">
@@ -153,6 +155,36 @@
 		<div class="row bottom"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nisi aliquid itaque rem dolorem ullam, dignissimos assumenda et neque eveniet.</p></div>
 		</div>
 	</section>
+	<section id="logo" class="container">
+		<div class="row">
+			<img src="../../images/logo-1.png" alt="logo-img">
+			<img src="../../images/logo-2.png" alt="logo-img">
+			<img src="../../images/logo-3.png" alt="logo-img">
+			<img src="../../images/logo-4.png" alt="logo-img">
+		</div>
+	</section>
+	<section id="contact">
+		<div class="container">
+		<div class="header">
+			<h2>contact us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		</div>
+		<form id="form" class="row">
+			<div class="col">
+				<input type="text" value="YOUR NAME *">
+				<input type="email" value="YOUR E-MAIL *">
+				<input type="textarea" value="SUBJECT">
+			</div>
+			<div class="col">
+				<textarea form="form" placeholder="YOUR MESSAGE *" required="true"></textarea>
+			</div>
+			<div class="row">
+				<button type="submit">SEND MESSAGE</button>
+			</div>
+		</form>
+		</div>
+	</section>
+
 
 </body>
 </html>
