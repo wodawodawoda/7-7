@@ -55,10 +55,6 @@ body {
   width: 100%;
 }
 
-section:not(#cooperation) {
-  padding-bottom: 120px;
-}
-
 h2 {
   font-family: Montserrat-bold;
   font-size: 40px;
@@ -80,6 +76,7 @@ h3 {
   font-size: 18px;
   color: #222222;
   letter-spacing: -0.45px;
+  margin-top: 28px;
 }
 
 p {
@@ -87,6 +84,7 @@ p {
   font-size: 14px;
   color: #777777;
   letter-spacing: -0.35px;
+  margin: 0;
 }
 
 a {
@@ -100,7 +98,7 @@ a {
 
 nav {
   position: absolute;
-  top: 0;
+  top: 44px;
 }
 
 #logo {
@@ -221,6 +219,7 @@ nav {
   align-items: center;
   width: 100%;
   background: #f7f7f7;
+  padding-bottom: 70px;
 }
 
 #portfolio .row {
@@ -230,10 +229,24 @@ nav {
 #portfolio .item {
   text-align: center;
   background: #fff;
+  margin-bottom: 50px;
+}
+
+#portfolio .item h3 {
+  margin-bottom: 4px;
 }
 
 #portfolio .item p {
   font-family: Droidserif-italic;
+  margin-bottom: 28px;
+}
+
+#about {
+  padding-bottom: 15px;
+}
+
+#about .row {
+  margin-bottom: 105px;
 }
 
 #about img {
@@ -293,6 +306,7 @@ nav {
 
 #team .row.bottom {
   width: 600px;
+  margin: 50px 0 120px;
 }
 
 #team .item .team-photo {
@@ -300,6 +314,7 @@ nav {
   width: 221px;
   border-radius: 50%;
   background: #000000;
+  margin-bottom: 26px;
 }
 
 #team .item p {
@@ -312,12 +327,14 @@ nav {
   font-family: Droidserif-italic;
   font-size: 14px;
   color: #777777;
+  margin-top: 6px;
 }
 
 #team .item span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-top: 12px;
   height: 41px;
   width: 41px;
   font-size: 20px;
@@ -326,12 +343,8 @@ nav {
   background-color: #f9f9f9;
 }
 
-#cooperation {
-  height: 164px;
-}
-
-#cooperation .row {
-  justify-content: space-around;
+#cooperation img {
+  margin: 60px 20px;
 }
 
 #contact {
@@ -340,6 +353,7 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-bottom: 120px;
   background: url(../../images/map-image.svg) 120% no-repeat, #222222;
 }
 
