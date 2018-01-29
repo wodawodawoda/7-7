@@ -52,6 +52,10 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   max-width: 934px;
   width: 100%;
 }
@@ -270,6 +274,55 @@ nav {
   color: #ffffff;
   text-transform: uppercase;
   word-spacing: 182px;
+}
+
+#team {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #f9f9f9;
+}
+
+#team .row {
+  justify-content: space-around;
+  text-align: center;
+}
+
+#team .row.bottom {
+  width: 600px;
+}
+
+#team .item .team-photo {
+  height: 221px;
+  width: 221px;
+  border-radius: 50%;
+  background: #000000;
+}
+
+#team .item p {
+  font-family: Montserrat-bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+#team .item p + p {
+  font-family: Droidserif-italic;
+  font-size: 14px;
+  color: #777777;
+}
+
+#team .item span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  width: 41px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 3px solid #222222;
+  background-color: #f9f9f9;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -102,4 +102,36 @@ nav
 			text-transform: uppercase
 			word-spacing: 182px
 
+// TEAM
+
+#team
+	+flex()
+
+	width: 100%
+	background: $bg-light
+	.row
+		justify-content: space-around
+		text-align: center
+		&.bottom
+			width: 600px
+	.item
+		.team-photo
+			+size(221px, 221px)
+			border-radius: 50%
+			background: #000000
+		p
+			+font($h-font, 16px, #000000)
+			&+p
+				+font($h-p-font, 14px, $p-grey)
+		span
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			+size(41px, 41px)
+			font-size: 20px
+			border-radius: 50%
+			border: 3px solid #222222;
+			background-color: #f9f9f9;
+
+
 
