@@ -33,6 +33,8 @@ nav
 		p
 			+font($h-p-font, 40px, #fff)
 			text-transform: capitalize
+			+media(small)
+				display: none
 		h1
 			+font($h-font, 75px, #fff)
 			text-transform: uppercase
@@ -235,18 +237,21 @@ nav
 // FOOTER
 
 #footer
-	height: 90px
 	.row
+		line-height: 60px
 		+media(small)
 			flex-direction: column-reverse
-			margin-top: 40px
+			margin-top: 20px
 			line-height: 40px
 	.item
 		flex: 1
 		text-align: center
 		p
 			text-align: left
+			+media(small)
+				text-align: center
 	.footer-social
+		width: 100%
 		span
 			display: inline-flex
 			align-items: center

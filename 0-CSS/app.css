@@ -219,6 +219,12 @@ nav {
   text-transform: capitalize;
 }
 
+@media (max-width: 767px) {
+  #hero .item p {
+    display: none;
+  }
+}
+
 #hero .item h1 {
   font-family: Montserrat-bold;
   font-size: 75px;
@@ -572,14 +578,14 @@ nav {
   background: #FED136;
 }
 
-#footer {
-  height: 90px;
+#footer .row {
+  line-height: 60px;
 }
 
 @media (max-width: 767px) {
   #footer .row {
     flex-direction: column-reverse;
-    margin-top: 40px;
+    margin-top: 20px;
     line-height: 40px;
   }
 }
@@ -591,6 +597,16 @@ nav {
 
 #footer .item p {
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  #footer .item p {
+    text-align: center;
+  }
+}
+
+#footer .footer-social {
+  width: 100%;
 }
 
 #footer .footer-social span {
