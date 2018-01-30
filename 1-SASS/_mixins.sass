@@ -16,12 +16,12 @@
 		@error "Invalid flex argument"
 
 
-//PARENT HAS TO BE RELATIVE
-=bg-opacity($bg-image-url, $opacity)
+=bg-opacity($bg-image-url, $opacity, $size:normal)
 	position: relative
 	&:before
 		content: ""
 		background: url($bg-image-url) no-repeat center
+		background-size: $size
 		position: absolute
 		top: 0
 		left: 0
@@ -32,22 +32,24 @@
 		@extend #hero:before
 		background: rgba(0,0,0,$opacity)
 
-
-=bg-hue($bg-image-url, $opacity)
-	position: relative
-	&:before
-		content: ""
-		background: url($bg-image-url) no-repeat center
-		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
-		right: 0
-		z-index: 11
-
-
 =btn
 	+font($h-font, 1em, #fff)
 	padding: 25px 50px
 	background: $color-gold
+
+
+$small: '(max-width: 767px)'
+$medium: '(min-width: 768px) and (max-width: 979px)'
+
+=media($point)
+	@if $point == small
+		@media (max-width: 767px)
+	  	@content
+	@else if $point == medium
+		@media (min-width: 768px) and (max-width: 933px)
+	  	@content
+	@else if $point == sm-md
+		@media (max-width: 933px)
+	  	@content
+
 

@@ -8,6 +8,8 @@ body
 .row
 	+flex(row, wrap)
 	width: 100%
+	+media(medium)
+		width: 90%
 
 .col
 	+flex(column, nowrap)
@@ -17,6 +19,7 @@ body
 	+flex(column, nowrap)
 	max-width: 934px
 	width: 100%
+
 
 // section:not(#cooperation)
 // 	padding-bottom: 120px
@@ -29,19 +32,31 @@ h2
 	text-transform: uppercase
 	letter-spacing: -1px
 	margin-top: 120px
+	+media(small)
+		margin-top: 60px
+	+media(medium)
+		margin-top: 80px
 	&+p
 		+font($h-p-font, 16px, $p-grey)
 		margin-bottom: 80px
+		+media(sm-md)
+			font-size: 20px
 
 h3
 	+font($h-font, 18px, $h-black)
 	letter-spacing: -0.45px
 	margin-top: 28px
+	+media(sm-md)
+		font-size: 22px
+		letter-spacing: 0
 
 p
 	+font($p-font, 14px, $p-grey)
 	letter-spacing: -0.35px
 	margin: 0
+	+media(sm-md)
+		font-size: 18px
+		letter-spacing: 0
 
 a
 	text-decoration: none
