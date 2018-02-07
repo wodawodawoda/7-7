@@ -2,28 +2,88 @@
 
 nav
 	position: absolute
-	top: 44px
+	top: 0
 
-#logo
+.logo
 	+font($logo-font, 24px, $color-gold)
+	margin-top: 34px
 
-#nav-menu
+.hamburger
+	display: none
+	z-index: 2
+	position: fixed
+	left: 23px
+	top: 31px
+	+size(40px, 40px)
+	line-height: 36px
+	cursor: pointer
+	transform-origin: center center
+	transition: linear .4s
+	+media(small)
+		display: block
+.hum
+	border-left: 2px solid $color-gold
+	margin-left: 8px;
+	height: 20px
+	width: 40px
+
+
+.menu-btn
+	display: none
+	+media(small)
+		display: block
+		position: fixed
+		+size(40px, 40px)
+		left: 25px
+		top: 32px
+		background: transparent
+		border: 2px dotted black
+		color: $white
+		z-index: 3
+		opacity: 0
+
+.menu-btn:checked ~ .nav-menu
+	right: 0
+
+.menu-btn:checked ~ .hamburger
+	transform: rotate(90deg)
+
+.nav-menu
 	+flex(row, nowrap, flex-end, center)
+	margin-top: 34px
+	+media(small)
+		margin-top: 0
+		flex-direction: column
+		position: fixed
+		top: 0
+		right: 100%
+		background: $p-grey
+		width: 100vw
+		height: 50vh
+		justify-content: space-around
+		z-index: 1
+		transition: linear .5s
 	.item
-		+font($nav-font, 1em, #fff)
+		+font($nav-font, 1em, $white)
+		z-index: 2
 		margin-right: 20px
 		text-transform: uppercase
+		transition: .3s
+		&:hover
+			color: $color-gold
+			cursor: pointer
 		&:last-child
 			margin-right: 0
-	+media(small)
-		display: none
+		+media(small)
+			margin: 10px 0
+
 
 // HEADER HERO
 
-#hero
+.hero
 	+flex()
 	+size(100%, 700px)
-	+bg-opacity("../../images/hero.png", 0.5, cover)
+	+bg-opacity("../images/hero.png", 0.5, cover)
 	+media(sm-md)
 		height: 100vh
 	.item
@@ -31,19 +91,31 @@ nav
 		+media(medium)
 			max-width: 90%
 		p
-			+font($h-p-font, 40px, #fff)
+			+font($h-p-font, 40px, $white)
 			text-transform: capitalize
 			+media(small)
 				display: none
 		h1
-			+font($h-font, 75px, #fff)
+			+font($h-font, 75px, $white)
+			margin: 20px 0
 			text-transform: uppercase
+			overflow: hidden
+			border-right: .15em solid orange
+			white-space: nowrap
+			letter-spacing: 1px
+			animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite
+			+media(small)
+				font-size: 3.7em
+				margin: 20px 10px
+				border: none
+				white-space: normal
+				animation: none
 		button
 			+btn
 
 // SERVICES
 
-#services
+.services
 	+flex()
 	.row
 		justify-content: space-between
@@ -56,24 +128,16 @@ nav
 			margin-bottom: 120px
 			+media(sm-md)
 				margin-bottom: 40px
-	%icon
+	.icon
 		margin: 0 auto
 		border: 3px solid $color-gold
 		border-radius: 50%
 		+size(68px, 68px)
-	.icon-1
-		@extend %icon
-		background: url(../../images/icon-basket.svg) no-repeat center
-	.icon-2
-		@extend %icon
-		background: url(../../images/icon-laptop.svg) no-repeat center
-	.icon-3
-		@extend %icon
-		background: url(../../images/icon-locked.svg) no-repeat center
+		padding: 20px
 		
 // PORTFOLIO
 
-#portfolio
+.portfolio
 	+flex()
 	width: 100%
 	background: $bg-dark
@@ -84,23 +148,34 @@ nav
 			justify-content: space-around
 	.item
 		text-align: center
-		background: #fff
+		background: $white
 		margin-bottom: 50px
 		h3
 			margin-bottom: 4px
 		p
 			font-family: $h-p-font
 			margin-bottom: 28px
+		&:hover
+			animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+			transform: translate3d(0, 0, 0)
+			backface-visibility: hidden
+			perspective: 1000px
 
 // ABOUT US
 
-#about
+.about
 	padding-bottom: 15px
 	.row
 		margin-bottom: 105px
+		transition: 1s
+		&:hover
+			transform: scale(1.2, 1.2)
 		+media(small)
 			flex-direction: column
-			margin-bottom: 40px
+			margin-bottom: 0
+			transform: scale(0.8, 0.8)
+			&:hover
+				transform: scale(1, 1)
 	img
 		margin: 0 45px
 		+media(small)
@@ -142,14 +217,14 @@ nav
 			+size(30vw, 30vw)
 		p
 			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7)
-			color: #ffffff
-			+font($h-font, 18px, #ffffff)
+			color: $white
+			+font($h-font, 18px, $white)
 			text-transform: uppercase
 			word-spacing: 500px
 
 // TEAM
 
-#team
+.team
 	+flex()
 	width: 100%
 	background: $bg-light
@@ -168,6 +243,9 @@ nav
 			border-radius: 50%
 			background: #000000
 			margin-bottom: 26px
+			transition: .5s
+			&:hover
+				transform: scale(1.1, 1.1)
 		p
 			+font($h-font, 16px, #000000)
 			&+p
@@ -183,27 +261,39 @@ nav
 			border-radius: 50%
 			border: 3px solid #222222
 			background-color: #f9f9f9
+			transition: .3s
+			&:hover
+				background-color: $color-gold
+				color: white
+				border-color: $color-gold
 
 // COOPERATION
 
-#cooperation
+.cooperation
 	img
 		margin: 60px 20px
-		// flex: 1 50%
+		// flex: 1 50%	
+
 
 // CONTACT
 
-#contact
+.contact
 	+flex()
 	width: 100%
 	padding-bottom: 120px
-	background: url(../../images/map-image.svg) 120% no-repeat, #222222
+	background: url(../images/map-image.svg) 120% repeat, #222222
+	transition: 10s
+	&:hover
+		background-position: -1000%
 	+media(small)
 		padding-bottom: 40px
+		background-position: 30%
+		&:hover
+			background-position: 30%
 	.header
 		h2
-			color: #fff
-	#form
+			color: $white
+	.form
 		.row
 			flex-wrap: nowrap
 			width: 100%
@@ -217,17 +307,21 @@ nav
 		input
 			+size(100%, 50px)
 			border: 1px solid #cccccc
-			background-color: #ffffff
+			background-color: $white
 			margin-bottom: 30px
+			line-height: normal
+			text-indent: 20px
 			+media(small)
 				width: 80vw
 				margin-right: -20px
 		textarea
 			display: inline-flex
-			+size(100%, 220px)
+			+size(100%, 210px)
 			border: 1px solid #cccccc
-			background-color: #ffffff
+			background-color: $white
 			margin-bottom: 30px
+			padding-top: 10px
+			text-indent: 20px
 			+media(small)
 				width: 80vw
 				margin-left: -20px
@@ -236,7 +330,7 @@ nav
 
 // FOOTER
 
-#footer
+.footer
 	.row
 		line-height: 60px
 		+media(small)
@@ -262,3 +356,8 @@ nav
 			border: 3px solid #222222
 			background-color: #000
 			color: white
+			transition: .3s
+			&:hover
+				background-color: $white
+				color: $color-gold
+				border-color: $color-gold

@@ -29,7 +29,7 @@
 		right: 0
 		z-index: -1
 	&:after
-		@extend #hero:before
+		@extend .hero:before
 		background: rgba(0,0,0,$opacity)
 
 =btn
@@ -38,8 +38,8 @@
 	background: $color-gold
 
 
-$small: '(max-width: 767px)'
-$medium: '(min-width: 768px) and (max-width: 979px)'
+$medium: '(min-width: 768px)'
+$large: '(min-width: 1200px)'
 
 =media($point)
 	@if $point == small
@@ -51,5 +51,37 @@ $medium: '(min-width: 768px) and (max-width: 979px)'
 	@else if $point == sm-md
 		@media (max-width: 933px)
 	  	@content
+
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+  40%, 60%
+    transform: translate3d(4px, 0, 0)
+
+/* The typing effect */
+@keyframes typing 
+  from  
+  	width: 0 
+  to  
+  	width: 100%
+
+@keyframes height 
+  from  
+  	height: 0 
+  to  
+  	height: 100%
+
+/* The typewriter cursor effect */
+@keyframes blink-caret 
+  from, to  
+  	border-color: transparent 
+  50%  
+  	border-color: orange; 
+
+
 
 
