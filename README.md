@@ -1,2 +1,2 @@
 # Golden PSD to HTML
-preview: https://wodawodawoda.github.io/7-7/
+preview: https://wodawodawoda.github.io/Golden-template
